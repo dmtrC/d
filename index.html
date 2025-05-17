@@ -165,7 +165,7 @@
             if(state.balance >= cost) {
                 state.balance -= cost;
                 state.upgrades.click++;
-                state.clickPower *= 1.5;
+                state.clickPower *= 1;
                 
                 updateShop();
             }
@@ -180,7 +180,7 @@
         function updateShop() {
             const btn = document.querySelector('.upgrade-btn');
             const level = state.upgrades.click;
-            const cost = 50 * level;
+            const cost = 10 * level;
             
             btn.children[0].textContent = `🛠️ Потужнiсть кликов (Lv.${level})`;
             btn.children[1].textContent = `$${cost}`;
@@ -202,7 +202,7 @@
         setInterval(() => {
             state.energy = Math.min(100, state.energy + 1);
             updateDisplay();
-        }, 500); // Было 3000, стало 1000 мс
+        }, 1500); // Было 3000, стало 1000 мс
 
         // Запуск игры
         gameLoop();
