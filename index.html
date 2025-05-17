@@ -160,7 +160,7 @@
 
         // Покупка улучшений
         function buyUpgrade(type) {
-            const cost = 50 * state.upgrades.click;
+            const cost = 500 * state.upgrades.click;
 
             if(state.balance >= cost) {
                 state.balance -= cost;
@@ -180,7 +180,7 @@
         function updateShop() {
             const btn = document.querySelector('.upgrade-btn');
             const level = state.upgrades.click;
-            const cost = 1000 * level;
+            const cost = 500 * level;
             
             btn.children[0].textContent = `🛠️ Потужнiсть кликов (Lv.${level})`;
             btn.children[1].textContent = `$${cost}`;
