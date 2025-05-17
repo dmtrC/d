@@ -202,7 +202,7 @@
         setInterval(() => {
             state.energy = Math.min(100, state.energy + 1);
             updateDisplay();
-        }, 1000); // Было 3000, стало 1000 мс
+        }, 500); // Было 3000, стало 1000 мс
 
         // Запуск игры
         gameLoop();
